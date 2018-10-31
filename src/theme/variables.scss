@@ -14,17 +14,6 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
-
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -34,12 +23,24 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #7e6d6d,
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  light:      #feffed,
+  dark:       #222,
+  superlight: white
 );
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+$background-color: color($colors, light);
+$toolbar-background: transparent !default;
+
 
 
 // App iOS Variables
@@ -59,7 +60,11 @@ $colors: (
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
+$card-md-background-color: white;
+$list-md-header-margin-bottom: 0;
+$list-md-header-border-top: none;
+$toolbar-md-title-text-color: color($colors, dark);
+$list-md-border-color: transparent;
 
 
 

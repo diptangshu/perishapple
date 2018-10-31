@@ -11,40 +11,57 @@
   <ion-grid no-padding>
     <ion-row>
       <ion-col>
-        <ion-card>
-          <ion-card-content>
-            <ion-icon name="person"></ion-icon>
-          </ion-card-content>
-        </ion-card>
+        <img src="assets/imgs/rupali.jpg" width="70%" alt="">
+      </ion-col>
+      <ion-col>
+        <h2>Rupali Mittal</h2>
+        <p>
+          <ion-icon name="heart" *ngFor="let i of rating"> </ion-icon>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </p>    
+        <p>You reduced waste by <strong>2%</strong> since last month</p>    
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-card>
+        <ion-card class="stat">
 
           <ion-card-header>
-            Purchased
+            <ion-icon name="cart"></ion-icon> Purchased
           </ion-card-header>
 
-          <ion-card-content>
-            10kg
+          <ion-card-content class="purchased">
+            {{ data.purchasedQty }} Pk
           </ion-card-content>
 
         </ion-card>
       </ion-col>
       <ion-col>
-        <ion-card>
+        <ion-card class="stat">
 
           <ion-card-header>
-            Wastage
+              <ion-icon name="leaf"></ion-icon> Wastage
           </ion-card-header>
 
-          <ion-card-content>
-            8kg
+          <ion-card-content class="wasted">
+              {{ data.wastedQty }} Pk
           </ion-card-content>
 
         </ion-card>
       </ion-col>
     </ion-row>
+
   </ion-grid>
+
+  <ion-card>
+      <ion-card-header>
+        How much you could have saved?
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list class="savings">
+          <ion-item>Yesterday: food worth of Rs. 500</ion-item>
+          <ion-item>This Week: Rs. 3,000</ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
